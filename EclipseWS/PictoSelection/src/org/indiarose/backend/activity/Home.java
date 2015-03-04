@@ -222,7 +222,7 @@ BootstrapDelegate {
 			onDestroy();
 			break;
 		case R.id.home_sendlog:
-			// sendLogs();
+			sendLogs();
 			break;
 
 		case R.id.home_install_tts:

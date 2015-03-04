@@ -1,0 +1,5 @@
+package org.indiarose.net;
+
+public class ActionLogSendModel {
+
+}

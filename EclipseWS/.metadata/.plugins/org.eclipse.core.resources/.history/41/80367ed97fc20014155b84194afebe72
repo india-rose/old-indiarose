@@ -1,0 +1,33 @@
+package org.indiarose.net;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.codegist.crest.CRest;
+import org.indiarose.lib.ActionLog;
+
+public class NetLogger {
+	public static final String urlEnvoie="index.php";
+	public static String envoyer(List<ActionLog> logs){ 
+
+		if(logs.isEmpty())
+		{
+			return "No data to send";
+		}
+		
+		List<ActionLogSendModel> data = new ArrayList<ActionLogSendModel>();
+		
+		for(ActionLog log : logs)
+		{
+			data.add(new ActionLogSendModel(log.getDescription(), log.getType(), log.getTime()));
+		}
+		
+		String emailData = logs.get(0).getEmail();
+		
+		CRest crest = CRest.getInstance();
+		LoggerService logservice = crest.build(LoggerService.class);
+		return logservice.envoyer(emailData, data);
+	}		
+		
+	
+}

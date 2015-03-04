@@ -1,0 +1,84 @@
+package org.indiarose.net;
+
+import java.util.List;
+
+import org.apache.http.HttpEntityEnclosingRequest;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpUriRequest;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.indiarose.lib.ActionLog;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import android.util.Log;
+
+public class NetLogger {
+
+	public static String envoyer(List<ActionLog> logs){ 
+
+		if(logs.isEmpty())
+		{
+			return "No data to send";
+		}
+		
+		JSONArray data = new JSONArray();
+		
+		//ActionLogSendModel[] data = new ActionLogSendModel[logs.size()];
+		Log.wtf("India Log", "type of logs : " + logs.getClass());
+		Log.wtf("India Log", "tostring of logs : " + logs.toString());
+		Log.wtf("India Log", "type of a log : " + logs.get(0).getClass());
+		Log.wtf("India Log", "tostring of a log : " + logs.get(0).toString());
+		
+		try
+		{
+			for(int i = 0 ; i < logs.size(); ++i)
+			{
+				ActionLog log = logs.get(i);
+				
+				JSONObject obj = new JSONObject();
+				obj.put("description", log.getDescription());
+				obj.put("type", log.getType());
+				obj.put("time", log.getTime());
+				
+				data.put(obj);
+			}
+		}
+		catch(Exception e)
+		{
+			Log.wtf("India Log", "Exception while serializing request", e);
+		}
+		
+		String emailData = logs.get(0).getEmail();
+		
+		
+		try
+		{
+			HttpClient client = new DefaultHttpClient();
+			HttpUriRequest request = new HttpPost("http://julienmialon.com/india/logs/" + emailData);
+			
+			StringEntity content = new StringEntity(data.toString());
+			content.setContentType("application/json");
+			content.setChunked(true);
+			((HttpEntityEnclosingRequest) request).setEntity(content);
+		}
+		catch(Exception e)
+		{
+			Log.wtf("India Log", "Exception while sending request", e);
+		}
+		
+		/*
+		
+		CRest crest = CRest.getInstance();
+		LoggerService logservice = crest.build(LoggerService.class);
+		String resultData = logservice.envoyer(emailData, data.toString());
+		
+		Log.wtf("Log result", "result get from rest ws : " + resultData);
+		
+		return resultData;
+		*/
+	}		
+		
+	
+}

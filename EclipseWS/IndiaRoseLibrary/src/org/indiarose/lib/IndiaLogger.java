@@ -13,6 +13,7 @@ import java.util.List;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.TypeReference;
 import org.indiarose.R;
 import org.indiarose.lib.model.Indiagram;
 import org.indiarose.net.NetLogger;
@@ -45,52 +46,15 @@ public class IndiaLogger {
 
 
 	protected static void writeToXml(String data){
-		//		File myFile = new File(DIRPATH,"log.xml"); //on d������clare notre futur fichier
-		//
-		//		File myDir = new File(DIRPATH); //pour cr������er le repertoire dans lequel on va mettre notre fichier
-		//		Boolean success=true;
-		//		if (!myDir.exists()) {
-		//			success = myDir.mkdir(); //On cr������e le r������pertoire (s'il n'existe pas!!)
-		//		}
-		//		if (success){
-		//			FileOutputStream output;
-		//			try {
-		//				output = new FileOutputStream(myFile,true);
-		//
-		//				output.write(data.getBytes());
-		//				output.close();
-		//			} catch (FileNotFoundException e) {
-		//				
-		//				e.printStackTrace();
-		//			} catch (IOException e) {
-		//				
-		//				e.printStackTrace();
-		//			}
-		//
-		//		}
+		
 	}
 
 	public static void writeAllSentence(List<Indiagram> listIndia){
-		//		String data = "<log>\n\t<phrase-read>\n\t\t";
-		//		for (Indiagram india : listIndia) 
-		//			data+= "<mot>"+india.text+"</mot> ";
-		//
-		//		data+="\n\t</phrase-read>\n</log>\n";
-		//		writeToXml(data);
+	
 	}
 
 	public static void writeCorrections(List<Indiagram> lastList,List<Indiagram> afterList){
-		//		String data = "<log>\n\t<phrase-last>\n\t\t";
-		//		for (Indiagram india : lastList) 
-		//			data+= "<mot>"+india.text+"</mot> ";
-		//
-		//		data+="\n\t</phrase-last>\n\t<phrase-after>\n\t\t";
-		//
-		//		for (Indiagram india : afterList) 
-		//			data+= "<mot>"+india.text+"</mot> ";
-		//
-		//		data+="\n\t</phrase-after>\n</log>\n";
-		//		writeToXml(data);
+	
 	}
 
 	public static void addActionLog(Context currentContext, String description, String type, long timestamp){
@@ -107,7 +71,7 @@ public class IndiaLogger {
 		}
 		ActionLog a = new ActionLog(description, type, ""+timestamp,gmail);
 		lesActions.add(a);
-		System.out.println("ça ajoute action : size =" + lesActions.size() );
+		System.out.println("Ã§a ajoute action : size =" + lesActions.size() );
 		control(a);
 
 
@@ -161,11 +125,11 @@ public class IndiaLogger {
 		}
 		f=new File(DIRPATH);
 		if(f.list().length >0){
-			//recupe��re la liste des fichiers
+			//recupeï¿½ï¿½re la liste des fichiers
 			String [] lesFiles = f.list();
 			for(String s : lesFiles){
 				System.out.println("INDIALOGGER - "+s);
-				//on recup��re le int contenu dans le nom de fichier
+				//on recupï¿½ï¿½re le int contenu dans le nom de fichier
 				//rappel les fichiers se nomment : log_rank.json
 				String rank  = s.substring(s.lastIndexOf("_")+1, s.lastIndexOf(FILEEXTENSION));
 				System.out.println("INDIALOGGER - rank  = "+rank);
@@ -174,19 +138,19 @@ public class IndiaLogger {
 					res = Integer.parseInt(rank);
 				}
 			}
-			res++; // on veux écrire dnas un nouveau fichier donc on fais monter le rank de 1.
+			res++; // on veux Ã©crire dnas un nouveau fichier donc on fais monter le rank de 1.
 			System.out.println(new String(FILEPREFIX+res+FILEEXTENSION));
 			return new String(FILEPREFIX+res+FILEEXTENSION);
 		}
 		else{
-			//pas de file de log, on cr��er le premier
+			//pas de file de log, on crï¿½ï¿½er le premier
 			return new String(FILEPREFIX+0+FILEEXTENSION);
 		}
 	}
 
 	/**
-	 * dans cette méthode on cherche la dernière balise valider pour sauvegarder le plus de phrases non flush
-	 * et ensuite on les écrit dans le fichier à l'aide de write
+	 * dans cette mÃ©thode on cherche la derniÃ¨re balise valider pour sauvegarder le plus de phrases non flush
+	 * et ensuite on les Ã©crit dans le fichier Ã  l'aide de write
 	 */
 	public static void flushB4Save(){
 		int nbActions = lesActions.size();
@@ -201,14 +165,14 @@ public class IndiaLogger {
 				}
 			}
 			if(found){
-				//on a trouvé une fin de phrase à save, à l'index index
+				//on a trouvÃ© une fin de phrase Ã  save, Ã  l'index index
 				//on recupere toutes les actions du debut jusqu'a index
-				//la dernière phrase valide
+				//la derniÃ¨re phrase valide
 				ArrayList<ActionLog> res =new ArrayList<ActionLog>();
 				for(int i = 0; i < index+1;i++){
 					res.add(lesActions.get(i));
 				}
-				//on definit lesActions à sauvegardé avec la nouvelle liste construite
+				//on definit lesActions Ã  sauvegardÃ© avec la nouvelle liste construite
 				lesActions= res;
 				write();
 				removeAllAction();
@@ -297,29 +261,6 @@ public class IndiaLogger {
 		
 		
 	}
-
-	
-//	//+-+-+-+-+-+-+-+- ASYNC TASK
-//	class NetLoggerAsyncTask extends AsyncTask<String, Void, Void>{
-//
-//		@Override
-//		protected Void doInBackground(String... arg0) {
-//			String email = arg0[0];
-//			String json = arg0[1];
-//			String currentFile = arg0[2];
-//			int current = Integer.parseInt(arg0[3]);
-//			int nbFiles = Integer.parseInt(arg0[4]);
-//			String s =NetLogger.envoyer(IndiaCrypter.crypt(email), IndiaCrypter.crypt(json));
-//			int sendStatus = Integer.parseInt(""+s.charAt(0));
-//			Log.d("async - ", s+" i : "+sendStatus );
-//			if(sendStatus == 1){
-//				DeleteRecursive(new File(DIRPATH, currentFile));
-//			}
-//			Toast.makeText(a, "envoi du fichier "+current+" sur "+nbFiles+" terminé. Merci de patienter jusqu'à la fin de l'envoi des fichiers", Toast.LENGTH_SHORT).show();
-//			return null;
-//		}
-//
-//	}
 	
 	public static boolean sendingLogs = false;
 	public static NetLoggerAsyncTaskV2 async = null;
@@ -401,7 +342,7 @@ public class IndiaLogger {
 							//System.out.println("indialogger-gmail : "+gmail);
 							ObjectMapper mapper= new ObjectMapper();
 							try {
-								ArrayList<ActionLog> lesAct = mapper.readValue(new File(DIRPATH, currentFile), ArrayList.class);
+								ArrayList<ActionLog> lesAct = mapper.readValue(new File(DIRPATH, currentFile), new TypeReference<ArrayList<ActionLog>>(){});
 								
 								//System.out.println(json);
 								//Toast.makeText(a, "envoi du fichier "+current+" sur "+nbFiles+". Ne pas quitter", Toast.LENGTH_LONG).show();

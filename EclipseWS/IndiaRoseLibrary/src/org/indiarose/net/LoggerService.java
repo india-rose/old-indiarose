@@ -1,20 +1,20 @@
 package org.indiarose.net;
 
-import java.util.List;
-
 import org.codegist.crest.annotate.Consumes;
 import org.codegist.crest.annotate.EndPoint;
-import org.codegist.crest.annotate.PUT;
+import org.codegist.crest.annotate.FormParam;
+import org.codegist.crest.annotate.POST;
 import org.codegist.crest.annotate.Path;
-import org.indiarose.lib.ActionLog;
+import org.codegist.crest.annotate.PathParam;
+import org.codegist.crest.annotate.Produces;
 
-@EndPoint("http://orleans.miage.fr/elasticsearch")
-
+//@EndPoint("http://orleans.miage.fr/indiarose/rest")
+@EndPoint("http://julienmialon.com/india")
 public interface LoggerService {
 
-	@PUT
-	@Path("/logs/log/")
-	@Consumes("application/json")
-	public String envoyer(List<ActionLog> logs);
+	@POST
+	@Path("/logs/{email}")
+	@Produces("application/json")
+	public String envoyer(@PathParam("email") String email, @FormParam("data") String logs);
 	
 }

@@ -1174,9 +1174,10 @@ containing a value of this type.
     public static final class raw {
         public static final int correction=0x7f040000;
         public static final int indiagrams=0x7f040001;
-        public static final int playbutton=0x7f040002;
-        public static final int rightarrow=0x7f040003;
-        public static final int root=0x7f040004;
+        public static final int indiagrams_base=0x7f040002;
+        public static final int playbutton=0x7f040003;
+        public static final int rightarrow=0x7f040004;
+        public static final int root=0x7f040005;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 

@@ -32,9 +32,10 @@ public final class R {
     public static final class raw {
         public static int correction=0x7f030000;
         public static int indiagrams=0x7f030001;
-        public static int playbutton=0x7f030002;
-        public static int rightarrow=0x7f030003;
-        public static int root=0x7f030004;
+        public static int indiagrams_base=0x7f030002;
+        public static int playbutton=0x7f030003;
+        public static int rightarrow=0x7f030004;
+        public static int root=0x7f030005;
     }
     public static final class string {
         public static int action_settings=0x7f050000;
