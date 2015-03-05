@@ -6,6 +6,7 @@
 -->
 <resources>
 
+    <string name="logSended">Les logs ont bien été envoyé, merci de votre participation !</string>
     <string name="addText">Ajouter</string>
     <string name="ajout_des_indiagrams">Ajout des indiagrams</string>
     <string name="app_name">India Rose Administration</string>

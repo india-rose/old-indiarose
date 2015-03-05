@@ -1,2 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.codegist.crest.annotate.POST"/>
+<fullyQualifiedTypeName name="org.codegist.crest.annotate.PathParam"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="org.codehaus.jackson.type.TypeReference"/>
+<fullyQualifiedTypeName name="org.codegist.crest.annotate.Produces"/>
+<fullyQualifiedTypeName name="org.json.JSONObject"/>
+<fullyQualifiedTypeName name="org.apache.http.entity.StringEntity"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.security.cert.Certificate"/>
+<fullyQualifiedTypeName name="java.security.KeyStore"/>
+<fullyQualifiedTypeName name="javax.net.ssl.TrustManagerFactory"/>
+<fullyQualifiedTypeName name="javax.net.ssl.SSLContext"/>
+<fullyQualifiedTypeName name="org.apache.http.conn.ssl.SSLSocketFactory"/>
+<fullyQualifiedTypeName name="org.apache.http.conn.scheme.SchemeRegistry"/>
+<fullyQualifiedTypeName name="org.apache.http.conn.scheme.Scheme"/>
+<fullyQualifiedTypeName name="org.indiarose.net.NetLogger.MySSLSocketFactory"/>
+<fullyQualifiedTypeName name="java.nio.charset.Charset"/>
+<fullyQualifiedTypeName name="java.security.Timestamp"/>
+<fullyQualifiedTypeName name="java.sql.Timestamp"/>
+</qualifiedTypeNameHistroy>
