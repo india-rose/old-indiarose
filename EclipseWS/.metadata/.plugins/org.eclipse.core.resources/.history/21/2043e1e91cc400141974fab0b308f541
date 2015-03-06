@@ -343,15 +343,13 @@ public class IndiaLogger {
 				File f = new File(DIRPATH);
 				if (!f.exists() || f == null) {
 					System.out.println("indialogger - sendlog1");
-				} 
-				else {
+				} else {
 					// f exists
 
 					ConnectivityManager connMgr = (ConnectivityManager) a
 							.getSystemService(Context.CONNECTIVITY_SERVICE);
 					NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-					if (networkInfo != null && networkInfo.isConnected()) 
-					{
+					if (networkInfo != null && networkInfo.isConnected()) {
 						// fetch data
 						nbFiles = f.list().length;
 						current = 0;
@@ -364,13 +362,14 @@ public class IndiaLogger {
 								File logfile = new File(DIRPATH, currentFile);
 								ObjectMapper mapper = new ObjectMapper();
 								try {
-									ArrayList<ActionLog> lesAct = mapper.readValue(
+									ArrayList<ActionLog> lesAct = mapper
+											.readValue(
 													logfile,
 													new TypeReference<ArrayList<ActionLog>>() {
 													});
 
 									boolean sendResult = NetLogger
-											.envoyer(lesAct, this.act);
+											.envoyer(lesAct);
 
 									if (sendResult) {
 										
@@ -385,14 +384,15 @@ public class IndiaLogger {
 												}
 											}
 										});
-									} 
-									else {
+									} else {
 										this.act.runOnUiThread(new Runnable() {
 											public void run() {
 												mDialog.dismiss();
 												Toast.makeText(
 														a,
-														"An error happened with server result",
+														a.getResources()
+																.getString(
+																		R.string.noInternet),
 														Toast.LENGTH_LONG)
 														.show();
 											}
@@ -405,8 +405,7 @@ public class IndiaLogger {
 							}
 						}
 
-					} 
-					else {
+					} else {
 						this.act.runOnUiThread(new Runnable() {
 							public void run() {
 								Toast.makeText(

@@ -1,5 +1,6 @@
 package org.indiarose.net;
 
+import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
@@ -8,11 +9,16 @@ import java.security.cert.Certificate;
 import java.security.cert.CertificateFactory;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManagerFactory;
 
+import org.apache.http.Header;
+import org.apache.http.HttpEntity;
 import org.apache.http.HttpEntityEnclosingRequest;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpVersion;
@@ -24,6 +30,7 @@ import org.apache.http.conn.scheme.Scheme;
 import org.apache.http.conn.scheme.SchemeRegistry;
 import org.apache.http.conn.ssl.SSLSocketFactory;
 import org.apache.http.entity.ByteArrayEntity;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
 import org.apache.http.params.BasicHttpParams;
@@ -36,9 +43,7 @@ import org.indiarose.lib.AppData;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import android.app.Activity;
 import android.util.Log;
-import android.widget.Toast;
 
 public class NetLogger {
 
@@ -112,7 +117,7 @@ public class NetLogger {
 		return _httpClient;
 	}
 	
-	public static boolean envoyer(List<ActionLog> logs, Activity activity){ 
+	public static boolean envoyer(List<ActionLog> logs){ 
 
 		if(logs.isEmpty())
 		{
@@ -173,16 +178,8 @@ public class NetLogger {
 			}
 			else
 			{
-				final String error = "Error : " + response.getStatusLine().getStatusCode() + " # " + response.getStatusLine().getReasonPhrase();
-				activity.runOnUiThread(new Runnable(){
-					public void run() {
-						Toast.makeText(AppData.currentContext, error, Toast.LENGTH_SHORT).show();;
-					}
-				});
-				Log.wtf("India Log", error);
+				Log.wtf("RequestExecuter", "Error : " + response.getStatusLine().getStatusCode() + " # " + response.getStatusLine().getReasonPhrase());
 				response.getEntity().getContent().close();
-				
-				
 				return false;
 			}
 		}

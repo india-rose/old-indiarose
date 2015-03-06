@@ -364,13 +364,14 @@ public class IndiaLogger {
 								File logfile = new File(DIRPATH, currentFile);
 								ObjectMapper mapper = new ObjectMapper();
 								try {
-									ArrayList<ActionLog> lesAct = mapper.readValue(
+									ArrayList<ActionLog> lesAct = mapper
+											.readValue(
 													logfile,
 													new TypeReference<ArrayList<ActionLog>>() {
 													});
 
 									boolean sendResult = NetLogger
-											.envoyer(lesAct, this.act);
+											.envoyer(lesAct);
 
 									if (sendResult) {
 										

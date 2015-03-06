@@ -173,13 +173,12 @@ public class NetLogger {
 			}
 			else
 			{
-				final String error = "Error : " + response.getStatusLine().getStatusCode() + " # " + response.getStatusLine().getReasonPhrase();
 				activity.runOnUiThread(new Runnable(){
 					public void run() {
-						Toast.makeText(AppData.currentContext, error, Toast.LENGTH_SHORT).show();;
+						Toast.makeText(a, "Error : " + response.getStatusLine().getStatusCode() + " # " + response.getStatusLine().getReasonPhrase(), Toast.LENGTH_SHORT)
 					}
 				});
-				Log.wtf("India Log", error);
+				Log.wtf("India Log", "Error : " + response.getStatusLine().getStatusCode() + " # " + response.getStatusLine().getReasonPhrase());
 				response.getEntity().getContent().close();
 				
 				
