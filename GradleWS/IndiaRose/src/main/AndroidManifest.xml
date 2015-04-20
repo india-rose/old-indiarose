@@ -1,0 +1,111 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+    package="org.indiarose"
+	android:versionCode="3"
+    android:versionName="1.0.2" >
+
+	<uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.CAMERA"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission
+        android:name="android.permission.RECORD_AUDIO"
+        android:required="false" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:smallScreens="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        />
+	
+    <application 
+		android:name="org.indiarose.MyApplication"
+		android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@drawable/ir_logo"
+        android:theme="@style/Theme.Sherlock.Light.NoActionBar"
+        tools:replace="android:icon,android:theme,android:label"
+        >
+
+		<activity
+            android:name="org.indiarose.frontend.PictoSelection"
+            android:label="@string/title_activity_picto_selection"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.indiarose.backend.activity.Home"
+            android:label="@string/title_activity_main"
+            android:launchMode="singleTask"
+            android:icon="@drawable/ir_logo_params"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.indiarose.backend.activity.AppSettings"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="org.indiarose.backend.activity.BackgroundColor"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="org.indiarose.backend.activity.IndiaProperty"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="org.indiarose.backend.activity.Credits"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="org.indiarose.backend.activity.ViewIndiagram"
+            android:screenOrientation="landscape" />
+        <!-- Temporaire -->
+        <activity
+            android:name="org.indiarose.backend.activity.CollectionManagement"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="org.indiarose.backend.activity.EditIndiagram"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="org.indiarose.backend.activity.AddIndiagram"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="org.indiarose.backend.activity.CategoryBrowserActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="org.indiarose.backend.activity.InstallTTS"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="org.indiarose.backend.activity.ListenProperty"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="org.superdry.util.colorpicker.lib.SuperdryColorPicker"
+            android:theme="@android:style/Theme.Dialog" />
+		
+    </application>
+
+</manifest>

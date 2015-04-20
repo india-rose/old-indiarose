@@ -1,0 +1,9 @@
+<resources>
+
+    <color name="grid_bg">#FFFFFFFF</color>
+    <color name="grid_border">#FFC6C6C6</color>
+    <color name="vert_fonce">#149a53</color>
+    <color name="rose_fonce">#e2007a</color>
+    <color name="bleu_fonce">#007eff</color>
+
+</resources>

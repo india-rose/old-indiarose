@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="cellule_tiret">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:background">@drawable/selector_white_blue</item>
+        <item name="android:paddingLeft">15dip</item>
+    </style>
+
+    <style name="nom_cellule">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@drawable/text_selector_black_white</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="arrow">
+        <item name="android:src">@drawable/arrow</item>
+        <item name="android:layout_width">12dip</item>
+        <item name="android:layout_height">12dip</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">5dip</item>
+        <item name="android:layout_marginRight">10dip</item>
+    </style>
+
+    <style name="value_cellule">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@drawable/text_selector_black_white</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="separator_gray">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/gris</item>
+        <item name="android:layout_height">1dip</item>
+    </style>
+
+    <style name="cellule_titre">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:paddingLeft">15dip</item>
+    </style>
+
+    <style name="titre_category">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">15dip</item>
+        <item name="android:layout_toRightOf">@+id/logo_categorie</item>
+        <item name="android:textColor">@color/bleu_fonce</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="category_logo">
+        <item name="android:layout_width">30dip</item>
+        <item name="android:layout_height">30dip</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="relative_color">
+        <item name="android:layout_width">20dip</item>
+        <item name="android:layout_height">20dip</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">10dip</item>
+        <item name="android:layout_toLeftOf">@+id/arrow</item>
+    </style>
+    
+        <style name="parametres_ligne_valeur">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/bleu_fonce</item>
+        <item name="android:layout_marginRight">10dip</item>
+        <item name="android:gravity">right</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+</resources>

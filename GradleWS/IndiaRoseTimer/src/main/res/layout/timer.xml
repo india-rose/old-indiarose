@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <RelativeLayout
+        android:id="@+id/timer_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/arrow_timers" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/arrow_timers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/barre_timer"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip" >
+
+        <ImageView
+            android:id="@+id/arrow_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:rotation="180"
+            android:src="@drawable/arrow" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/consigne_timer"
+                android:layout_width="50dip"
+                android:layout_height="50dip" />
+
+            <TextView
+                android:id="@+id/consigne_timer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/barre_timer"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/action_bar_bottom"
+        android:padding="10dip" >
+
+        <Button
+            android:id="@+id/volume"
+            android:layout_width="40dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/volume" />
+
+        <Button
+            android:id="@+id/lock"
+            android:layout_width="40dip"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/volume"
+            android:background="@drawable/selector_lock" />
+
+        <Button
+            android:id="@+id/button_pause"
+            android:layout_width="40dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_play" />
+    </RelativeLayout>
+
+</RelativeLayout>

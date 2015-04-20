@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gris"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingTop="15dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/parametres_layout" >
+
+                <LinearLayout
+                    android:id="@+id/caracteristiques"
+                    style="@style/parametres_entete_layout" >
+
+                    <ImageView
+                        style="@style/parametres_entete_logo"
+                        android:src="@drawable/caracteristiquetimer" />
+
+                    <TextView
+                        style="@style/parametres_entete_text"
+                        android:text="@string/caracteristiques_repetition" />
+                </LinearLayout>
+
+                <View style="@style/separator" />
+
+                <RelativeLayout
+                    android:id="@+id/type_recurrence"
+                    style="@style/parametres_ligne"
+                    >
+
+                    <com.actionbarsherlock.internal.widget.IcsSpinner
+                        android:id="@+id/spinner_type_recurrence"
+                        style="android:spinnerStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/choixrecurrence"
+                        android:padding="0dp"
+                        android:prompt="@string/spinner_prompt" />
+                </RelativeLayout>
+
+                <View style="@style/separator" />
+				<include layout="@layout/choixjourssemaine"/>
+                <include layout="@layout/touslesjours" />
+
+                <include layout="@layout/touteslessemaines" />
+				<include layout="@layout/touslesmois" />
+				<include layout="@layout/touslesans" />
+                <LinearLayout
+                    android:id="@+id/fin_recurrence"
+                    style="@style/parametres_ligne" >
+
+                    <com.actionbarsherlock.internal.widget.IcsSpinner
+                        android:id="@+id/spinner_fin_recurrence"
+                        style="android:spinnerStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/finrecurrence"
+                        android:padding="0dp"
+                        android:prompt="@string/spinner_prompt" />
+
+                    <Button
+                        android:id="@+id/choisir_date"
+                        style="@style/calendar_bouton_valider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dip"
+                        android:padding="5dip"
+                        android:layout_margin="5dip"
+                        android:text="@string/choisir_date" />
+
+                    <LinearLayout
+                        android:id="@+id/occurence_avant_fin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" >
+
+                        <EditText style="@style/nb_occurences" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/occurences" />
+                    </LinearLayout>
+                </LinearLayout>
+                <include layout="@layout/afficherdatechoisie" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+	
+
+    <Button
+        android:id="@+id/action_periodique_valider"
+        style="@style/calendar_bouton_valider"
+        android:text="@string/valider" >
+    </Button>
+
+</RelativeLayout>

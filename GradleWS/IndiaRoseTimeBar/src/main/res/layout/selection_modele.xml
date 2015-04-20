@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/couleur_principale"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/valider"
+        android:orientation="vertical" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/selection_modele_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent" >
+
+            <android.support.v4.view.PagerTabStrip
+                android:id="@+id/selection_modele_pager_title_strip"
+                android:layout_height="50dip"
+                android:layout_width="wrap_content"
+                android:minHeight="50dip"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                style="@style/PagerTitleStrip"
+                android:textColor="@android:color/white"
+                android:background="@color/couleur_principale" />
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/valider"
+        style="@style/accueil_bouton_modifier"
+        android:text="@string/valider"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

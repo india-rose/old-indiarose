@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/couleur_principale"
+    android:orientation="vertical"
+    tools:context=".fragments.AjouterPeriodeFragment" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/envoyer"
+        android:padding="15dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/parametres_layout" >
+
+                <LinearLayout
+                    android:id="@+id/caracteristiques"
+                    style="@style/parametres_entete_layout" >
+
+                    <ImageView
+                        style="@style/parametres_entete_logo"
+                        android:src="@drawable/caracteristiquetimer" />
+
+                    <TextView
+                        style="@style/parametres_entete_text"
+                        android:text="@string/caracteristiques" />
+                </LinearLayout>
+
+                <View style="@style/separator" />
+
+                <RelativeLayout
+                    android:id="@+id/heure_debut"
+                    style="@style/parametres_ligne" >
+
+                    <TextView
+                        style="@style/parametres_ligne_text"
+                        android:text="@string/heure_debut" />
+
+                    <ImageView style="@style/parametres_ligne_fleche" />
+
+                    <TextView
+                        android:id="@+id/valeur"
+                        style="@style/parametres_ligne_valeur" />
+                </RelativeLayout>
+
+                <View style="@style/separator" />
+
+                <RelativeLayout
+                    android:id="@+id/heure_fin"
+                    style="@style/parametres_ligne" >
+
+                    <TextView
+                        style="@style/parametres_ligne_text"
+                        android:text="@string/heure_fin" />
+
+                    <ImageView style="@style/parametres_ligne_fleche" />
+
+                    <TextView
+                        android:id="@+id/valeur"
+                        style="@style/parametres_ligne_valeur" />
+                </RelativeLayout>
+
+                <View style="@style/separator" />
+
+                <RelativeLayout
+                    android:id="@+id/nom"
+                    style="@style/parametres_ligne" >
+
+                    <TextView
+                        style="@style/parametres_ligne_text"
+                        android:text="@string/nom_periode" />
+
+                    <EditText
+                        style="@style/parametres_ligne_valeur"
+                        android:hint="@string/nom_periode"
+                        android:singleLine="true" 
+                        android:inputType="textCapWords"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/parametres_layout"
+                android:layout_marginTop="15dip" >
+
+                <LinearLayout
+                    android:id="@+id/personnalisation"
+                    style="@style/parametres_entete_layout" >
+
+                    <ImageView
+                        style="@style/parametres_entete_logo"
+                        android:src="@drawable/color" />
+
+                    <TextView
+                        style="@style/parametres_entete_text"
+                        android:text="@string/personnalisation" />
+                </LinearLayout>
+
+                <View style="@style/separator" />
+
+                <RelativeLayout
+                    android:id="@+id/afficher_couleur_de_fond"
+                    style="@style/parametres_ligne" >
+
+                    <TextView
+                        style="@style/parametres_ligne_text"
+                        android:text="@string/afficher_une_couleur_de_fond" />
+
+                    <View style="@style/parametres_check" />
+                </RelativeLayout>
+
+                <View style="@style/separator" />
+
+                <RelativeLayout
+                    android:id="@+id/couleur"
+                    style="@style/parametres_ligne" >
+
+                    <TextView
+                        style="@style/parametres_ligne_text"
+                        android:text="@string/couleur" />
+
+                    <View style="@style/parametres_ligne_color" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/parametres_layout"
+                android:layout_marginTop="15dip" >
+
+                <LinearLayout style="@style/parametres_entete_layout" >
+
+                    <ImageView
+                        style="@style/parametres_entete_logo"
+                        android:src="@drawable/photo" />
+
+                    <TextView
+                        style="@style/parametres_entete_text"
+                        android:text="@string/indiagram" />
+                </LinearLayout>
+
+                <View style="@style/separator" />
+
+                <RelativeLayout
+                    android:id="@+id/indiagram"
+                    style="@style/parametres_ligne"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:minHeight="100dip"
+                        android:orientation="vertical"
+                        android:padding="10dip" >
+
+                        <ImageView
+                            android:id="@+id/image"
+                            android:layout_width="100dip"
+                            android:layout_height="100dip"
+                            android:fitsSystemWindows="true"
+                            android:src="@drawable/insert_selector" />
+
+                        <TextView
+                            android:id="@+id/titre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        style="@style/parametres_bouton_envoyer"
+        android:text="@string/creer_periode" />
+
+</RelativeLayout>

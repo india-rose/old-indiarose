@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/couleur_principale"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/selectionner_periodes_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:gravity="center"
+        android:text="@string/selectionner_periodes_description"
+        android:textColor="@android:color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/selectionner_periodes_description"
+        android:layout_above="@+id/valider"
+         >
+
+        <include layout="@layout/listview_periodes" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/valider"
+        style="@style/accueil_bouton_modifier"
+        android:text="@string/valider"
+        android:layout_alignParentBottom="true" >
+    </Button>
+
+</RelativeLayout>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color_application"
+    android:orientation="vertical"
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip"
+    android:paddingTop="15dip" >
+
+    <RelativeLayout
+        android:id="@+id/top_title"
+        android:layout_width="200dip"
+        android:layout_height="50dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="20dip"
+        android:background="@android:color/transparent" >
+
+        <ImageView
+            android:id="@+id/logo_indiarose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_india_rose_long" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/valider_parameter_timer"
+        android:layout_below="@+id/top_title"
+        android:layout_marginBottom="5dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <RelativeLayout style="@style/cellule_titre" >
+
+                <ImageView
+                    android:id="@+id/logo_categorie"
+                    style="@style/category_logo"
+                    android:src="@drawable/caracteristiquetimer" />
+
+                <TextView
+                    style="@style/titre_category"
+                    android:text="@string/caracteristique_timer" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/gris" />
+
+            <RelativeLayout
+                android:id="@+id/name_timer"
+                style="@style/cellule_tiret" >
+
+                <TextView
+                    android:id="@+id/text"
+                    style="@style/nom_cellule"
+                    android:text="@string/name" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    style="@style/arrow" />
+
+                <EditText
+                    android:id="@+id/value"
+                    style="@style/parametres_ligne_valeur"
+                    android:layout_toLeftOf="@+id/arrow"
+                    android:layout_toRightOf="@+id/text"
+                    android:hint="--"
+                    android:singleLine="true" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/gris" />
+
+            <RelativeLayout
+                android:id="@+id/style_timer"
+                style="@style/cellule_tiret" >
+
+                <TextView
+                    style="@style/nom_cellule"
+                    android:text="@string/type" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    style="@style/arrow" />
+
+                <TextView
+                    android:id="@+id/tiret"
+                    style="@style/value_cellule"
+                    android:layout_toLeftOf="@+id/arrow"
+                    android:text="@string/chrono_droit" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/gris" />
+
+            <RelativeLayout
+                android:id="@+id/timerSeconde_timer"
+                style="@style/cellule_tiret" >
+
+                <TextView
+                    style="@style/nom_cellule"
+                    android:text="@string/duree" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    style="@style/arrow" />
+
+                <TextView
+                    android:id="@+id/tiret"
+                    style="@style/value_cellule"
+                    android:layout_toLeftOf="@+id/arrow"
+                    android:text="@string/double_tiret" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dip"
+                android:background="@color/background_color_application" />
+
+            <RelativeLayout style="@style/cellule_titre" >
+
+                <ImageView
+                    android:id="@+id/logo_categorie"
+                    style="@style/category_logo"
+                    android:src="@drawable/color" />
+
+                <TextView
+                    style="@style/titre_category"
+                    android:text="@string/couleur" />
+            </RelativeLayout>
+
+            <View style="@style/separator_gray" />
+
+            <RelativeLayout
+                android:id="@+id/graduation_color_text"
+                style="@style/cellule_tiret" >
+
+                <TextView
+                    style="@style/nom_cellule"
+                    android:text="@string/graduation_text" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    style="@style/arrow" />
+
+                <RelativeLayout
+                    android:id="@+id/color"
+                    style="@style/relative_color"
+                    android:background="@android:color/black" >
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View style="@style/separator_gray" />
+
+            <RelativeLayout
+                android:id="@+id/graduation_color_trait"
+                style="@style/cellule_tiret" >
+
+                <TextView
+                    style="@style/nom_cellule"
+                    android:text="@string/graduation_trait" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    style="@style/arrow" />
+
+                <RelativeLayout
+                    android:id="@+id/color"
+                    style="@style/relative_color"
+                    android:background="@android:color/black" >
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View style="@style/separator_gray" />
+
+            <RelativeLayout
+                android:id="@+id/color_principale"
+                style="@style/cellule_tiret" >
+
+                <TextView
+                    style="@style/nom_cellule"
+                    android:text="@string/couleur_principale" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    style="@style/arrow" />
+
+                <RelativeLayout
+                    android:id="@+id/color"
+                    style="@style/relative_color"
+                    android:background="@color/bleu_horloge" >
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View style="@style/separator_gray" />
+
+            <RelativeLayout
+                android:id="@+id/color_secondaire"
+                style="@style/cellule_tiret" >
+
+                <TextView
+                    style="@style/nom_cellule"
+                    android:text="@string/couleur_principale" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    style="@style/arrow" />
+
+                <RelativeLayout
+                    android:id="@+id/color"
+                    style="@style/relative_color"
+                    android:background="@color/vert_horloge" >
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dip"
+                android:background="@color/background_color_application" />
+
+            <RelativeLayout style="@style/cellule_titre" >
+
+                <ImageView
+                    android:id="@+id/logo_categorie"
+                    style="@style/category_logo"
+                    android:src="@drawable/color" />
+
+                <TextView
+                    style="@style/titre_category"
+                    android:text="@string/consigne_timer" />
+            </RelativeLayout>
+
+            <View style="@style/separator_gray" />
+
+            <RelativeLayout
+                android:id="@+id/indiagram_consigne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="100dip"
+                    android:orientation="vertical"
+                    android:padding="10dip" >
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="100dip"
+                        android:layout_height="100dip"
+                        android:fitsSystemWindows="true"
+                        android:src="@drawable/insert_selector" />
+
+                    <TextView
+                        android:id="@+id/titre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/valider_parameter_timer"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/selector_white_blue"
+        android:text="@string/valider"
+        android:textColor="@drawable/text_selector_black_white" />
+
+</RelativeLayout>

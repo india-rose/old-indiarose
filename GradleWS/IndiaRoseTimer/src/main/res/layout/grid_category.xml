@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color_application"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top_title"
+        android:layout_width="200dip"
+        android:layout_height="50dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dip"
+        android:background="@android:color/transparent" >
+
+        <ImageView
+            android:id="@+id/logo_indiarose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_india_rose_long"/>
+    </RelativeLayout>
+
+    <GridView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/top_title"
+        android:layout_marginTop="50dip"
+        android:columnWidth="90dp"
+        android:verticalSpacing="20dip"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:stretchMode="spacingWidth" />
+
+</RelativeLayout>

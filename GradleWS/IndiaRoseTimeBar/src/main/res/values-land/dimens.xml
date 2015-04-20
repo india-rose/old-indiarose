@@ -1,0 +1,5 @@
+<resources>
+
+    <dimen name="hauteur_barre_jours">60dip</dimen>
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="choixrecurrence">
+        <item name="touslesjours">@string/tousjours</item>
+        <item name="tousjourssemaine">@string/tousjourssemaine</item>
+        <item name="toutessemaines">@string/toutessemaines</item>
+        <item name="tousmois">@string/tousmois</item>
+        <item name="tousans">@string/tousans</item>
+    </string-array>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/libs/ActionBarSherlock/ActionBarSherlock.iml" filepath="$PROJECT_DIR$/libs/ActionBarSherlock/ActionBarSherlock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/CalendarCard/CalendarCard.iml" filepath="$PROJECT_DIR$/libs/CalendarCard/CalendarCard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/ColorPicker/ColorPicker.iml" filepath="$PROJECT_DIR$/libs/ColorPicker/ColorPicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GradleWS.iml" filepath="$PROJECT_DIR$/GradleWS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IndiaRose/IndiaRose.iml" filepath="$PROJECT_DIR$/IndiaRose/IndiaRose.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IndiaRoseTimeBar/IndiaRoseTimeBar.iml" filepath="$PROJECT_DIR$/IndiaRoseTimeBar/IndiaRoseTimeBar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IndiaRoseTimer/IndiaRoseTimer.iml" filepath="$PROJECT_DIR$/IndiaRoseTimer/IndiaRoseTimer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Library/Library.iml" filepath="$PROJECT_DIR$/Library/Library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/TimesSquare/TimesSquare.iml" filepath="$PROJECT_DIR$/libs/TimesSquare/TimesSquare.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/libs.iml" filepath="$PROJECT_DIR$/libs/libs.iml" />
+    </modules>
+  </component>
+</project>
+

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_weight="40"
+                  android:layout_gravity="center|center_vertical"
+                  android:layout_marginBottom="4dp"
+                  android:layout_above="@+id/bas">
+    <RelativeLayout
+        android:id="@+id/app_settings_category_reading"
+        android:layout_width="@dimen/abs__search_view_preferred_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_marginRight="4dip"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:background="@drawable/buttonpink"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/categoryReadingText"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/app_settings_reading_delay"
+        android:layout_width="@dimen/abs__search_view_preferred_width"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="left"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/buttonblue"
+        android:text="@string/readingDelayText"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+</LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_weight="40"
+                  android:id="@+id/bas"
+                  android:layout_gravity="center|center_vertical" >
+
+        <Button
+            android:id="@+id/okButton"
+            android:layout_width="@dimen/abs__search_view_preferred_width"
+            android:layout_height="match_parent"
+            android:layout_marginRight="4dip"
+            android:layout_marginLeft="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:background="@drawable/buttongreen"
+            android:text="@string/okText"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="@dimen/abs__search_view_preferred_width"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_gravity="left"
+            android:background="@drawable/buttonorange"
+            android:text="@string/cancelText"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>

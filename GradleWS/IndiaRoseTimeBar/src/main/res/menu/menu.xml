@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_cercle"
+        android:title="cercle"/>
+    <item
+         android:id="@+id/menu_barre_horizontale"
+        android:title="barre horizontale"/>
+    <item
+         android:id="@+id/menu_barre_verticale"
+        android:title="barre verticale"/>
+
+</menu>
