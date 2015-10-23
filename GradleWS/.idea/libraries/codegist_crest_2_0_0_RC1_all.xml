@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="codegist-crest-2.0.0-RC1-all">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/codegist-crest-2.0.0-RC1-all.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="arrow" type="id"/>
+    <item name="text" type="id"/>
+    <item name="valeur" type="id"/>
+    <item name="envoyer" type="id"/>
+    <item name="calendar_valider" type="id"/>
+    <item name="accueil_bouton_modifier" type="id"/>
+    <item name="accueil_bouton_consulter" type="id"/>
+	<item name="tousles" type="id"/>
+	<item name="nb_occurences" type="id"/>
+</resources>

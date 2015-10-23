@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/couleur_principale"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingTop="15dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/parametres_layout" >
+
+                <LinearLayout
+                    android:id="@+id/caracteristiques"
+                    style="@style/parametres_entete_layout" >
+
+                    <ImageView
+                        style="@style/parametres_entete_logo"
+                        android:src="@drawable/caracteristiquetimer" />
+
+                    <TextView
+                        style="@style/parametres_entete_text"
+                        android:text="@string/caracteristiques" />
+                </LinearLayout>
+
+                <View style="@style/separator" />
+
+                <RelativeLayout
+                    android:id="@+id/format"
+                    style="@style/parametres_ligne" >
+
+                    <TextView
+                        style="@style/parametres_ligne_text"
+                        android:text="@string/format" />
+
+                    <ImageView style="@style/parametres_ligne_fleche" />
+
+                    <TextView
+                        android:id="@+id/valeur"
+                        style="@style/parametres_ligne_valeur" />
+                </RelativeLayout>
+                
+                <View style="@style/separator" />
+
+                <RelativeLayout
+                    android:id="@+id/orientation"
+                    style="@style/parametres_ligne" >
+
+                    <TextView
+                        style="@style/parametres_ligne_text"
+                        android:text="@string/orientation" />
+
+                    <ImageView style="@style/parametres_ligne_fleche" />
+
+                    <TextView
+                        android:id="@+id/valeur"
+                        style="@style/parametres_ligne_valeur" />
+                </RelativeLayout>
+
+                <View style="@style/separator" />
+
+                <RelativeLayout
+                    android:id="@+id/afficher_fond"
+                    style="@style/parametres_ligne" >
+
+                    <TextView
+                        style="@style/parametres_ligne_text"
+                        android:text="@string/afficher_fond" />
+
+                    <ImageView style="@style/parametres_ligne_fleche" />
+
+                    <TextView
+                        android:id="@+id/valeur"
+                        style="@style/parametres_ligne_valeur" />
+                </RelativeLayout>
+
+                <View style="@style/separator" />
+
+                <RelativeLayout
+                    android:id="@+id/afficher_les_jours"
+                    style="@style/parametres_ligne" >
+
+                    <TextView
+                        style="@style/parametres_ligne_text"
+                        android:text="@string/afficher_les_jours" />
+
+                    <ImageView style="@style/parametres_ligne_fleche" />
+
+                    <TextView
+                        android:id="@+id/valeur"
+                        style="@style/parametres_ligne_valeur" />
+                </RelativeLayout>
+
+                <View style="@style/separator" />
+
+                <RelativeLayout
+                    android:id="@+id/fond_horloge_dynamique"
+                    style="@style/parametres_ligne" >
+
+                    <TextView
+                        style="@style/parametres_ligne_text"
+                        android:text="@string/dessiner_fond_horloge_dynamique" />
+
+                    <ImageView style="@style/parametres_ligne_fleche" />
+
+                    <TextView
+                        android:id="@+id/valeur"
+                        style="@style/parametres_ligne_valeur" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/parametres_layout"
+                android:layout_marginTop="15dip" >
+
+                <LinearLayout
+                    android:id="@+id/periodes"
+                    style="@style/parametres_entete_layout" >
+
+                    <ImageView
+                        style="@style/parametres_entete_logo"
+                        android:src="@drawable/color" />
+
+                    <TextView
+                        style="@style/parametres_entete_text"
+                        android:text="@string/couleurs" />
+                </LinearLayout>
+
+                <View style="@style/separator" />
+
+                <RelativeLayout
+                    android:id="@+id/couleur_jours"
+                    style="@style/parametres_ligne" >
+
+                    <TextView
+                        style="@style/parametres_ligne_text"
+                        android:text="@string/couleur_jours" />
+
+                    <View style="@style/parametres_ligne_color" />
+                </RelativeLayout>
+
+                <View style="@style/separator" />
+
+                <RelativeLayout
+                    android:id="@+id/couleur_aujourdhui"
+                    style="@style/parametres_ligne" >
+
+                    <TextView
+                        style="@style/parametres_ligne_text"
+                        android:text="@string/couleur_aujourdhui" />
+
+                    <View style="@style/parametres_ligne_color" />
+                </RelativeLayout>
+
+                <View style="@style/separator" />
+
+                <RelativeLayout
+                    android:id="@+id/couleur_jours_avec_barre_de_temps"
+                    style="@style/parametres_ligne"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/parametres_ligne_text"
+                        android:text="@string/couleur_jours_avec_barre_de_temps" />
+
+                    <View style="@style/parametres_ligne_color" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

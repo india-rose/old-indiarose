@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/barre_temps_layout_haut_modifier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/barre_temps_affichage_liste"
+            style="@style/bouton_afficher_liste" />
+
+        <ImageView
+            android:id="@+id/barre_temps_charger"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_alignParentLeft="true"
+            android:adjustViewBounds="true"
+            android:padding="5dip"
+            android:layout_marginLeft="3dip"
+            android:src="@drawable/chargement_selector" />
+
+        <ImageView
+            android:id="@+id/barre_temps_sauvegarder"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_alignParentRight="true"
+            android:adjustViewBounds="true"
+            android:padding="5dip"
+            android:src="@drawable/disquette_selector" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/barre_temps_layout_haut"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/barre_temps_layout_bas"
+        android:layout_below="@+id/barre_temps_layout_haut_modifier"
+        android:background="#AAA"
+        android:orientation="horizontal"
+        android:padding="5dip" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/barre_temps_layout_liste"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/barre_temps_layout_bas"
+        android:layout_below="@+id/barre_temps_layout_haut_modifier"
+        android:background="@color/couleur_principale"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/barre_temps_supprimer_elements"
+        style="@style/bouton_supprimer_elements"
+        android:layout_alignBottom="@+id/barre_temps_layout_haut_modifier"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/barre_temps_layout_bas"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hauteur_barre_jours"
+        android:layout_alignParentBottom="true"
+        android:background="@color/couleur_principale"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bleu_fonce_texte">#2D3B6B</color>
+    <color name="bleu_fonce">#007eff</color>
+    <color name="bleu_fonce_hover">#005DBD</color>
+    <color name="vert_claire">#1FF082</color>
+    <color name="vert_fonce">#149a53</color>
+    <color name="vert_fonce_hover">#0E6D3B</color>
+    <color name="vert_fonce_2">#0E6D3B</color>
+    <color name="vert_fonce_2_hover">#15AD5E</color>
+    <color name="gris">#DADADA</color>
+    <color name="bleu_claire">#7AAFFF</color>
+    <color name="bleu_claire_hover">#5C85C2</color>
+    <color name="rose_fonce">#e2007a</color>
+    <color name="rose_fonce_hover">#bb166f</color>
+    <color name="rouge_fonce">#C74F76</color>
+    <color name="rouge_fonce_hover">#913A56</color>
+    
+    
+    <color name="couleur_principale">@color/vert_fonce</color>
+    <color name="couleur_principale_hover">@color/vert_fonce_hover</color>
+    <color name="couleur_semaine">@color/vert_fonce</color>
+    <color name="couleur_bouton_consulter">@color/bleu_fonce</color>
+    <color name="couleur_bouton_consulter_hover">@color/bleu_fonce_hover</color>
+    <color name="couleur_bouton_modifier">@color/vert_fonce_2</color>
+    <color name="couleur_bouton_modifier_hover">@color/vert_fonce_2_hover</color>
+    <color name="couleur_bouton_envoyer">@color/vert_fonce_2</color>
+    <color name="couleur_bouton_envoyer_hover">@color/vert_fonce_2_hover</color>
+    <color name="couleur_bouton_supprimer">@color/rouge_fonce</color>
+    <color name="couleur_bouton_supprimer_hover">@color/rouge_fonce_hover</color>
+    <color name="couleur_ligne">@android:color/white</color>
+    <color name="couleur_ligne_hover">#EEE</color>
+    <color name="couleur_cellule_text">@android:color/black</color>
+    <color name="couleur_cellule_paire">@color/vert_claire</color>
+    <color name="couleur_cellule_selectionnee">@color/couleur_principale_hover</color>
+    <color name="couleur_cellule_selectionnee_text">@android:color/white</color>
+    <color name="couleur_cellule_long_clicked">@color/rouge_fonce</color>
+    
+</resources>

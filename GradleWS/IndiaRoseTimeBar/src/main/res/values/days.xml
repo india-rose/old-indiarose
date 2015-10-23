@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="days">
+        <item name="monday">@string/lundi</item>
+        <item name="tuesdat">@string/mardi</item>
+        <item name="wednesday">@string/mercredi</item>
+        <item name="thursday">@string/jeudi</item>
+        <item name="friday">@string/vendredi</item>
+        <item name="saturday">@string/samedi</item>
+        <item name="sunday">@string/dimanche</item>
+    </string-array>
+
+</resources>

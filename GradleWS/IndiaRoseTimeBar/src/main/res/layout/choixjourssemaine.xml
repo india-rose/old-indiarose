@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/choixjourssemaine"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/parametres_ligne"
+    android:paddingLeft="5dip" 
+    android:paddingTop="10dip">
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal" 
+      >
+
+    <Button
+        android:id="@+id/jour_lundi"
+        style="@style/joursemaine"
+       
+        android:text="@string/lundi" />
+   
+    <Button
+        android:id="@+id/jour_mardi"
+        style="@style/joursemaine"
+        
+        android:text="@string/mardi" />
+    
+    <Button
+        android:id="@+id/jour_mercredi"
+        style="@style/joursemaine"
+        android:text="@string/mercredi" />
+    
+    <Button
+        android:id="@+id/jour_jeudi"
+        style="@style/joursemaine"
+        
+        android:text="@string/jeudi" />
+
+    </LinearLayout>
+    
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal" >
+    
+   <Button 
+        android:id="@+id/jour_vendredi"
+        android:text="@string/vendredi"
+        style="@style/joursemaine"/>
+    
+    <Button 
+        android:id="@+id/jour_samedi"
+        android:text="@string/samedi"
+        style="@style/joursemaine"/>
+    
+    <Button 
+        android:id="@+id/jour_dimanche"
+        android:text="@string/dimanche"
+        style="@style/joursemaine"/>
+   </LinearLayout>
+</LinearLayout>

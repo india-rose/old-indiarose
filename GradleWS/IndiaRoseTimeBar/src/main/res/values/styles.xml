@@ -1,0 +1,232 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="PagerTitleStrip">
+        <item name="android:textAppearance">@style/PagerTitleStripTextAppearance</item>
+    </style>
+
+    <style name="PagerTitleStripTextAppearance">
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="parametres_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="parametres_entete_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">15dip</item>
+    </style>
+
+    <item name="logo" type="id"/>
+    <style name="parametres_entete_logo">
+        <item name="android:id">@id/logo</item>
+        <item name="android:layout_width">30dip</item>
+        <item name="android:layout_height">30dip</item>
+        <item name="android:contentDescription">@string/app_name</item>
+    </style>
+
+    <style name="parametres_entete_text">
+        <item name="android:id">@id/text</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">15dip</item>
+        <item name="android:textColor">@color/couleur_principale</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="separator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dip</item>
+        <item name="android:background">@color/gris</item>
+    </style>
+
+    <style name="parametres_ligne">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:paddingLeft">15dip</item>
+        <item name="android:background">@drawable/ligne_selector</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="parametres_ligne_text">
+        <item name="android:id">@id/text</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/couleur_principale</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="parametres_ligne_fleche">
+        <item name="android:id">@id/arrow</item>
+        <item name="android:layout_width">12dip</item>
+        <item name="android:layout_height">12dip</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">5dip</item>
+        <item name="android:layout_marginRight">10dip</item>
+        <item name="android:src">@drawable/arrow</item>
+        <item name="android:contentDescription">string/app_name</item>
+    </style>
+
+    <style name="parametres_ligne_color">
+        <item name="android:id">@id/valeur</item>
+        <item name="android:layout_width">20dip</item>
+        <item name="android:layout_height">20dip</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">10dip</item>
+        <item name="android:layout_toLeftOf">@+id/arrow</item>
+        <item name="android:background">@android:color/black</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="parametres_ligne_valeur">
+        <item name="android:id">@id/valeur</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_toRightOf">@+id/text</item>
+        <item name="android:layout_toLeftOf">@+id/arrow</item>
+        <item name="android:textColor">@color/vert_fonce</item>
+        <item name="android:layout_marginRight">10dip</item>
+        <item name="android:gravity">right</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="parametres_bouton_envoyer">
+        <item name="android:id">@id/envoyer</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">@string/envoyer</item>
+        <item name="android:background">@drawable/bouton_envoyer_selector</item>
+    </style>
+
+    <style name="calendar_bouton_valider">
+        <item name="android:id">@id/calendar_valider</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">@string/valider</item>
+        <item name="android:background">@drawable/bouton_modifier_selector</item>
+    </style>
+
+    <style name="accueil_bouton_modifier">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">@string/modifier</item>
+        <item name="android:background">@drawable/bouton_modifier_selector</item>
+    </style>
+
+    <style name="bouton_afficher_liste">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">@string/afficher_liste</item>
+        <item name="android:background">@drawable/bouton_modifier_selector</item>
+    </style>
+
+    <style name="bouton_supprimer_elements">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">@string/supprimer_les_elements</item>
+        <item name="android:background">@drawable/bouton_supprimer_selector</item>
+    </style>
+
+    <style name="accueil_bouton_consulter">
+        <item name="android:text">@string/consulter</item>
+        <item name="android:background">@drawable/bouton_consulter_selector</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="bouton_preferences">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:layout_width">50dip</item>
+        <item name="android:background">@drawable/gear</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">@string/preferences</item>
+    </style>
+
+    <style name="parametres_check">
+        <item name="android:id">@id/valeur</item>
+        <item name="android:layout_height">20dip</item>
+        <item name="android:layout_width">20dip</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">10dip</item>
+        <item name="android:background">@drawable/check_selector</item>
+    </style>
+
+    <style name="bouton_retour">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:layout_width">50dip</item>
+        <item name="android:background">@drawable/precedent</item>
+    </style>
+
+    <style name="tousles">
+        <item name="android:id">@id/tousles</item>
+        <item name="android:text">@string/tousles</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+    <style name="nb_occurences">
+        <item name="android:id">@id/nb_occurences</item>
+        <item name="android:text">1</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">number</item>
+    </style>
+
+    <style name="joursemaine">
+        <item name="android:layout_width">60dip</item>
+        <item name="android:layout_height">60dip</item>
+        <item name="android:textColor">@color/couleur_principale</item>
+        <item name="android:background">@drawable/rond_selector</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_margin">5dip</item>
+    </style>
+
+</resources>

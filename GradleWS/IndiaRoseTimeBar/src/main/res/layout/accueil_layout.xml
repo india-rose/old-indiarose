@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/couleur_principale"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/accueil_bouton_preferences"
+        style="@style/bouton_preferences" 
+        android:contentDescription="@string/app_name"/>
+
+    <ImageView
+        android:id="@+id/accueil_logo"
+        android:layout_width="200dip"
+        android:layout_height="50dip"
+        android:layout_marginTop="10dip"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo_india_rose_long"
+        android:contentDescription="@string/app_name" />
+
+    <LinearLayout
+        android:id="@+id/accueil_aide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accueil_logo"
+        android:paddingLeft="50dip"
+        android:paddingRight="50dip"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/vert"
+            android:text="@string/accueil_aide_jours_avec_chronograms" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bleu"
+            android:text="@string/accueil_aide_aujourdhui" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/modifier_jours_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/accueil_aide"
+        android:layout_above="@+id/accueil_bouton_consulter"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="15dip" />
+
+    <Button
+        android:id="@+id/accueil_bouton_consulter"
+        style="@style/accueil_bouton_consulter"
+        android:layout_above="@+id/accueil_bouton_modifier" />
+
+    <Button
+        android:id="@+id/accueil_bouton_modifier"
+        style="@style/accueil_bouton_modifier"
+        android:layout_alignParentBottom="true"
+       >
+    </Button>
+
+</RelativeLayout>

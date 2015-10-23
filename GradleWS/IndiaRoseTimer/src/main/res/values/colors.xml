@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   
+    <color name="gris">#DADADA</color>
+    <color name="bleu_fonce">#2E4051</color>
+    <color name="_bleu_holo">#34B3E1</color>
+	<color name="bleu_horloge">#2B568D</color>
+	<color name="vert_horloge">#7CCC6D</color>
+	<color name="rose_clair">#fca3ee</color>
+	<color name="rose_flat">#FFF0FC</color>
+	<color name="bleu">#245489</color>	
+	
+	<color name="action_bar_bottom">@color/bleu</color>
+	<color name="background_color_application">@color/bleu</color>
+	<color name="color_cercle">@color/bleu</color>
+</resources>

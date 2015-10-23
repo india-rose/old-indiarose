@@ -1,0 +1,264 @@
+<!--
+/*
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. 
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+ */
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:id="@+id/linear_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:layout_marginRight="4dip"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1"
+            android:background="@drawable/buttonblue"
+            android:text="@string/backText"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/editButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:layout_marginRight="4dip"
+            android:layout_weight="1"
+            android:background="@drawable/buttongreen"
+            android:text="@string/editText"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:layout_weight="1"
+            android:background="@drawable/buttonorange"
+            android:layout_marginRight="4dip"
+            android:text="@string/deleteText"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear_bottom"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ScrollView
+            android:id="@+id/relative_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip" >
+
+                <TextView
+                    android:id="@+id/textTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="7dip"
+                    android:text="@string/indiagramTextTitle"
+                    android:textColor="#006FFF"
+                    android:textSize="25sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="150dip"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textTitle"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/text_parent_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/text"
+                    android:layout_marginBottom="7dip"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/indiagramCategoryTitle"
+                    android:textColor="#006FFF"
+                    android:textSize="25sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/name_text_parent_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/text_parent_category"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginRight="5dip"
+                    android:text="@string/nameLabel"
+                    android:textColor="#006FFF"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/m_indiagramCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_parent_category"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/name_text_parent_category"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/button_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name_text_parent_category"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/button_category"
+                    android:layout_marginBottom="7dip"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/indiagramSoundTitle"
+                    android:textColor="#006FFF"
+                    android:textSize="25sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/filepath_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/text_sound"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginRight="5dip"
+                    android:text="@string/filePathLabel"
+                    android:textColor="#006FFF"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/m_indiagramSound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_sound"
+                    android:layout_toRightOf="@+id/filepath_sound"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/button_sound_modif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/filepath_sound"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/button_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/button_sound_modif"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/listen"
+                        android:layout_width="200dip"
+                        android:layout_height="55dip"
+                        android:layout_marginRight="4dip"
+                        android:background="@drawable/buttonblue"
+                        android:text="@string/listenButton"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/relative_right"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dip"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/indiagram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:id="@+id/button_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/indiagram"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button_picture"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/text_color_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:text="@string/indiagramTextColorLabel"
+                    android:textColor="#006FFF"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/m_indiagramTextColor"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:background="#fff"
+                    android:clickable="true"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

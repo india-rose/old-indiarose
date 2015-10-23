@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="C:\Program Files\Android\Android Studio\gradle\gradle-2.2.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/IndiaRose" />
+            <option value="$PROJECT_DIR$/IndiaRoseTimeBar" />
+            <option value="$PROJECT_DIR$/IndiaRoseTimer" />
+            <option value="$PROJECT_DIR$/Library" />
+            <option value="$PROJECT_DIR$/libs" />
+            <option value="$PROJECT_DIR$/libs/ActionBarSherlock" />
+            <option value="$PROJECT_DIR$/libs/CalendarCard" />
+            <option value="$PROJECT_DIR$/libs/ColorPicker" />
+            <option value="$PROJECT_DIR$/libs/TimesSquare" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
+

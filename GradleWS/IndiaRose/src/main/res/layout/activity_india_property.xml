@@ -1,0 +1,192 @@
+<!--
+/*
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. 
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+ */
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo" />
+
+
+
+    <LinearLayout
+        android:id="@+id/linear_info"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <ScrollView
+            android:id="@+id/relative_left"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="65dip"
+             >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="20dip"
+                 >
+
+                <TextView
+                    android:id="@+id/text_image_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/imageSizeTitle"
+                    android:textColor="#006FFF"
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+
+                <Spinner
+                    android:id="@+id/spinnerImageSize"
+                    android:layout_width="150dip"
+                    android:layout_height="50dip"
+                    android:layout_below="@+id/text_image_size"
+                    android:layout_marginBottom="7dip"
+                    android:layout_marginTop="7dip" />
+
+                <TextView
+                    android:id="@+id/text_font_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/spinnerImageSize"
+                    android:layout_marginBottom="7dip"
+                    android:text="@string/fontTitle"
+                    android:textColor="#006FFF"
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+
+                <Spinner
+                    android:id="@+id/spinnerPolicy"
+                    android:layout_width="150dip"
+                    android:layout_height="50dip"
+                    android:layout_alignLeft="@+id/spinnerImageSize"
+                    android:layout_below="@+id/text_font_label"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="7dip" />
+
+                <TextView
+                    android:id="@+id/text_font_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/spinnerPolicy"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="7dip"
+                    android:text="@string/fontSizeTitle"
+                    android:textColor="#006FFF"
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+
+                <Spinner
+                    android:id="@+id/spinnerSizePolicy"
+                    android:layout_width="150dip"
+                    android:layout_height="50dip"
+                    android:layout_alignLeft="@+id/spinnerImageSize"
+                    android:layout_below="@+id/text_font_size"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/text_font_size" />
+				
+				<CheckBox
+                    android:id="@+id/checkboxhomecategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spinnerSizePolicy"
+                    android:layout_marginBottom="7dip"
+                    android:text="@string/checkboxhomecategory"
+                    android:textColor="#006FFF"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/checkboxMove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkboxhomecategory"
+                    android:layout_marginBottom="7dip"
+                    android:text="@string/checkboxMove"
+                    android:textColor="#006FFF"
+                    android:textSize="14sp" />
+				
+                <CheckBox
+                    android:id="@+id/checkboxreinforcer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkboxMove"
+                    android:layout_marginBottom="7dip"
+                    android:text="@string/reinforcerReadingLabel"
+                    android:textColor="#006FFF"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/button_reinforcer_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="95dip"
+                    android:layout_below="@+id/checkboxreinforcer"
+                    android:layout_margin="10dip"
+                    android:background="@drawable/buttonviolet"
+                    android:text="@string/reinforcerColorButton"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/relative_right"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center" >
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linear_info"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="25dip"
+        android:paddingRight="25dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button_ok"
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@drawable/buttongreen"
+            android:text="@string/okText"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:layout_marginBottom="4dip"
+            android:layout_marginTop="4dip"
+            android:layout_weight="1"
+            android:background="@drawable/buttonorange"
+            android:text="@string/cancelText"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>
